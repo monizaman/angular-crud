@@ -1,0 +1,25 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>Email</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users">
+            <td>{{user.id}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>
+                <a ng-click="editUser(user.id)" class="btn btn-primary">Edit</a>
+                <a ng-click="deleteuser(user.id)" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<a ng-click="createNewUser()" class="btn btn-primary">create new user</a>
